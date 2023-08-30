@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import confetti from 'canvas-confetti'
 
-import { TURNS } from './constants'
 import { Square } from './components/Square.jsx'
+import { TURNS } from './constants'
 import { checkWinner, checkEndGame } from './logic/checks.js'
 import { WinnerModal } from './components/WinnerModal'
 import { saveGameToStorage, resetGameStorage } from './logic/storage/saveGame'
@@ -71,8 +71,8 @@ function App () {
               return (
                 <Square
                   key={index}
-                  updateBoard={updateBoard}
                   index={index}
+                  updateBoard={updateBoard}
                 >
                   {square}
                 </Square>
